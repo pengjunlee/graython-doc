@@ -53,13 +53,13 @@
         <div class="article-name">{{ article.name }}</div>
 
         <el-watermark
-          font="{
+          :font="{
             color: 'rgba(157, 157, 157, 0.2)',
             fontSize: '13',
             textBaseline: 'hanging'
           }"
           :content="article.id > 0 ? 'Graython' : ''"
-          gap="[500, 500]">
+          :gap="[250, 250]">
           <div class="bl-preview" :style="{ fontSize: getFontSize() }" v-html="article.html"></div>
         </el-watermark>
       </div>

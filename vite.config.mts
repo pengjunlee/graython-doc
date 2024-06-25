@@ -14,9 +14,10 @@ import { resolve } from 'path'
 
 const npm_lifecycle_event = process.env.npm_lifecycle_event
 
-const isSpring = () => {
-  return npm_lifecycle_event && npm_lifecycle_event === 'build:spring'
+ const isRunDev = () => {
+  return npm_lifecycle_event && npm_lifecycle_event === 'dev'
 }
+
 
 console.log('当前运行脚本: ', npm_lifecycle_event)
 
