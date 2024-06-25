@@ -66,7 +66,7 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: isSpring() ? '../blossom-backend/backend/src/main/resources/static/blog' : 'dist',
+    outDir: 'docs',
     // 警告大小, 单位kb
     // chunkSizeWarningLimit: 1000,
     rollupOptions: {
