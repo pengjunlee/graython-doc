@@ -2,9 +2,7 @@ import axios from 'axios'
 import { toRoute } from '@/router'
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { ElMessage } from 'element-plus'
-import { Local } from '@/assets/utils/storage'
 import { isNotNull } from '@/assets/utils/obj'
-import { storeKey as authKey, useUserStore } from '@/stores/user'
 import { getApiBaseUrl } from '@/scripts/env'
 
 const baseUrl = getApiBaseUrl()
@@ -28,7 +26,6 @@ export class Request {
      */
     this.instance.interceptors.request.use(
       (config: AxiosRequestConfig): any => {
-        
         return config
       },
       (err: any) => Promise.reject(err)
@@ -61,13 +58,6 @@ export class Request {
 
         if (isSuccess) {
           return res.data
-        } else if (res.data.code === 'AUTH-40101') {
-          /* 授权被拦截, 则需要退回登录页请求 */
-          console.log('授权失败, 重置登录状态')
-          const userStore = useUserStore()
-          userStore.reset()
-          toRoute('/home')
-          return Promise.reject(res)
         } else {
           /*
            * 其他接口报错, 直接拒绝并提示错误信息

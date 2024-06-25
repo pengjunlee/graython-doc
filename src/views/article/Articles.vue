@@ -30,7 +30,7 @@
                 marginTop: data.p === '0' ? '5px' : '1px',
                 marginBottom: data.p === '0' ? '5px' : '1px'
               }">
-              <div :class="[data.t.includes('subject') && userStore.userParams.WEB_BLOG_SUBJECT_TITLE === '1' ? 'subject-title' : 'doc-title']">
+              <div :class="[data.t.includes('subject') ? 'subject-title' : 'doc-title']">
                 <div class="doc-name">
                   <img class="menu-icon-img" v-if="isShowImg(data)" :src="data.icon" />
                   <svg v-else-if="isShowSvg(data)" class="icon menu-icon" aria-hidden="true">
@@ -50,16 +50,16 @@
       </div>
 
       <div class="doc-content-container" ref="PreviewRef" :style="{ fontSize: getFontSize() }">
-        <div class="article-name" v-if="userStore.userParams.WEB_BLOG_SHOW_ARTICLE_NAME === '1'">{{ article.name }}</div>
+        <div class="article-name">{{ article.name }}</div>
 
         <el-watermark
-          :font="{
-            color: userStore.userParams.WEB_BLOG_WATERMARK_COLOR,
-            fontSize: userStore.userParams.WEB_BLOG_WATERMARK_FONTSIZE,
+          font="{
+            color: 'rgba(157, 157, 157, 0.2)',
+            fontSize: '13',
             textBaseline: 'hanging'
           }"
-          :content="article.id > 0 && userStore.userParams.WEB_BLOG_WATERMARK_ENABLED === '1' ? userStore.userParams.WEB_BLOG_WATERMARK_CONTENT : ''"
-          :gap="[userStore.userParams.WEB_BLOG_WATERMARK_GAP, userStore.userParams.WEB_BLOG_WATERMARK_GAP]">
+          :content="article.id > 0 ? 'Graython' : ''"
+          gap="[200, 200]">
           <div class="bl-preview" :style="{ fontSize: getFontSize() }" v-html="article.html"></div>
         </el-watermark>
       </div>
@@ -111,7 +111,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { ref, onUnmounted, nextTick } from 'vue'
-import { useUserStore } from '@/stores/user'
 import { useLifecycle } from '@/scripts/lifecycle'
 // element plus
 import { ArrowRightBold, Setting } from '@element-plus/icons-vue'
@@ -127,7 +126,6 @@ import { isNull, isNotNull, isNotBlank } from '@/assets/utils/obj'
 // components
 import ArticleSetting from './ArticleSetting.vue'
 
-const userStore = useUserStore()
 useLifecycle(
   () => {
     window.onHtmlEventDispatch = onHtmlEventDispatch

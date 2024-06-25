@@ -46,5 +46,5 @@ export const articleWordLineApi = (params?: object): Promise<R<any>> => {
  * @returns
  */
 export const articleInfoOpenApi = (params?: object): Promise<R<any>> => {
-  return rq.getFile<R<any>>('/graython-docs/doc/20151/doc.html')
+  return rq.getFile<R<any>>('/doc/20151/doc.html')
 }

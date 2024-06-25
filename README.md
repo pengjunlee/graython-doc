@@ -1,22 +1,29 @@
-# Blossom-doc
-
-Blossom 笔记软件的博客工程
-
-[博客页面的使用文档](https://www.wangyunf.com/blossom-doc/guide/deploy/blog.html)
-
-![](./doc/imgs/blog_home_pc.jpg "Blossom 首页")
-
-<p align="center">
-<img src="../doc/imgs/blog_home_m.png" height="700">
-<img src="../doc/imgs/blog_article.png" height="700" style="margin-left: 30px">
-</p>
-<p align="center">博客移动端</p>
-
-
-```
-# 下载依赖
-npm install
-
-# 构建
-npm run build
-```
+"id": "9999",
+  "type": 3,
+  "username": "blos",
+  "nickName": "Blossom 试用",
+  "avatar": "https://www.wangyunf.com/bl/pic/home/bl/img/U9999/6d2666df61553b5d3a761a0269113886.jpg",
+  "remark": "该账号是 Blossom 试用账号。",
+  "location": "101100101",
+  "articleCount": 23,
+  "articleWords": 138517,
+  "creTime": "2023-08-04 16:48:28",
+  "delTime": "0",
+  "params": null,
+  "userParams": {
+      "WEB_LOGO_NAME": "Blos 试用博客",
+      "WEB_BLOG_WATERMARK_CONTENT": "Blossom",
+      "WEB_ARTICLE_URL": "https://wangyunf.com/blos/#/articles?articleId=",
+      "WEB_BLOG_WATERMARK_COLOR": "rgba(157, 157, 157, 0.2)",
+      "WEB_BLOG_URL_ERROR_TIP_SHOW": "",
+      "WEB_BLOG_LINKS": "[\n  {\n    \"NAME\": \"Blossom 官方文档\",\n    \"URL\": \"https://www.wangyunf.com/blossom-doc/index\",\n    \"LOGO\": \"https://www.wangyunf.com/bl/pic/home/bl/img/U1/head/blossom_logo.png\"\n  },{\n    \"NAME\": \"Blossom 试用地址\",\n    \"URL\": \"https://www.wangyunf.com/blossom-demo/#/settingIndex\",\n    \"LOGO\": \"https://www.wangyunf.com/bl/pic/home/bl/img/U1/head/blossom_logo_grey.png\"\n  }\n]",
+      "WEB_LOGO_URL": "https://www.wangyunf.com/bl/pic/home/bl/img/U9999/6d2666df61553b5d3a761a0269113886.jpg",
+      "WEB_GONG_WANG_AN_BEI": "公网安备号示例",
+      "WEB_BLOG_WATERMARK_GAP": "200",
+      "WEB_IPC_BEI_AN_HAO": "ICP 备案号示例",
+      "WEB_BLOG_WATERMARK_ENABLED": "1",
+      "WEB_BLOG_COLOR": "rgb(104, 104, 104)",
+      "WEB_BLOG_SHOW_ARTICLE_NAME": "1",
+      "WEB_BLOG_SUBJECT_TITLE": "0",
+      "WEB_BLOG_WATERMARK_FONTSIZE": "13"
+  }
