@@ -30,7 +30,7 @@
                 marginTop: data.p === '0' ? '5px' : '1px',
                 marginBottom: data.p === '0' ? '5px' : '1px'
               }">
-              <div :class="[data.t.includes('subject') ? 'subject-title' : 'doc-title']">
+              <div :class="[data.t.includes('subject') && 1===2 ? 'subject-title' : 'doc-title']">
                 <div class="doc-name">
                   <img class="menu-icon-img" v-if="isShowImg(data)" :src="data.icon" />
                   <svg v-else-if="isShowSvg(data)" class="icon menu-icon" aria-hidden="true">
@@ -59,7 +59,7 @@
             textBaseline: 'hanging'
           }"
           :content="article.id > 0 ? 'Graython' : ''"
-          gap="[200, 200]">
+          gap="[500, 500]">
           <div class="bl-preview" :style="{ fontSize: getFontSize() }" v-html="article.html"></div>
         </el-watermark>
       </div>
