@@ -1,27 +1,14 @@
 import { isNull } from '@/assets/utils/obj'
 
-const apiBaseUrl = import.meta.env.VITE_BL_API_BASE_URI
 const print = () => {
   console.log('Blossom-web ===> 环境:', import.meta.env.MODE)
-  console.log('Blossom-web ===> window.blconfig.DOMAIN:', window.blconfig.DOMAIN.PRD)
-  console.log('Blossom-web ===> SpringBaseUrl:', apiBaseUrl)
-  if (import.meta.env.DEV) {
-    console.log(window.blconfig)
-  }
+  
 }
 
 print()
 
-/**
- * 是否集成到 Github 环境
- * @returns
- */
-const isDev = () => {
-  return import.meta.env.MODE === 'development'
-}
-
 export const getApiBaseUrl = () => {
-  return isDev() ? "":window.blconfig.DOMAIN.PRD
+  return import.meta.env.DEV ? "":window.blconfig.DOMAIN.PRD
 }
 
 export const getUserId = () => {

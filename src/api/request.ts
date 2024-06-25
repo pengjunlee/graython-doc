@@ -5,9 +5,8 @@ import { ElMessage } from 'element-plus'
 import { Local } from '@/assets/utils/storage'
 import { isNotNull } from '@/assets/utils/obj'
 import { storeKey as authKey, useUserStore } from '@/stores/user'
-import { getApiBaseUrl, getUserId } from '@/scripts/env'
+import { getApiBaseUrl } from '@/scripts/env'
 
-const userId = getUserId()
 const baseUrl = getApiBaseUrl()
 
 export class Request {
@@ -29,18 +28,7 @@ export class Request {
      */
     this.instance.interceptors.request.use(
       (config: AxiosRequestConfig): any => {
-        let token: string = ''
-        let tokenCache = Local.get(authKey)
-        if (isNotNull(tokenCache) && isNotNull(tokenCache.token)) {
-          token = tokenCache.token
-        }
-        config.headers = {
-          ...config.headers,
-          ...{
-            'Blossom-User-Id': userId,
-            Authorization: 'Bearer ' + token
-          }
-        }
+        
         return config
       },
       (err: any) => Promise.reject(err)
