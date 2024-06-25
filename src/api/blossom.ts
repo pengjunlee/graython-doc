@@ -7,7 +7,8 @@ import type { R } from './request'
  * @returns
  */
 export const docTreeOpenApi = (params?: object): Promise<R<any>> => {
-  return rq.get<R<any>>('/graython-docs/docTree.json')
+
+  return rq.get<R<any>>('/docTree.json')
 }
 
 /**

@@ -1,10 +1,10 @@
 import { isNull } from '@/assets/utils/obj'
 
-const springBaseUrl = import.meta.env.VITE_BL_API_BASE_URI
+const apiBaseUrl = import.meta.env.VITE_BL_API_BASE_URI
 const print = () => {
   console.log('Blossom-web ===> 环境:', import.meta.env.MODE)
   console.log('Blossom-web ===> window.blconfig.DOMAIN:', window.blconfig.DOMAIN.PRD)
-  console.log('Blossom-web ===> SpringBaseUrl:', springBaseUrl)
+  console.log('Blossom-web ===> SpringBaseUrl:', apiBaseUrl)
   if (import.meta.env.DEV) {
     console.log(window.blconfig)
   }
@@ -13,18 +13,15 @@ const print = () => {
 print()
 
 /**
- * 是否集成到 Spring 环境
+ * 是否集成到 Github 环境
  * @returns
  */
-export const isSpring = () => {
-  return import.meta.env.MODE === 'spring'
+const isDev = () => {
+  return import.meta.env.MODE === 'development'
 }
 
 export const getApiBaseUrl = () => {
-  if (isSpring()) {
-    return '../'
-  }
-  return window.blconfig.DOMAIN.PRD
+  return isDev() ? "":window.blconfig.DOMAIN.PRD
 }
 
 export const getUserId = () => {
@@ -41,27 +38,6 @@ export const getSysName = () => {
     return 'Blossom'
   }
   return window.blconfig.SYS.NAME
-}
-
-export const getEmail = () => {
-  if (isNull(window.blconfig.SYS.EMAIL)) {
-    return ''
-  }
-  return window.blconfig.SYS.EMAIL
-}
-
-export const getGwab = () => {
-  if (isNull(window.blconfig.SYS.GONG_WANG_AN_BEI)) {
-    return ''
-  }
-  return window.blconfig.SYS.GONG_WANG_AN_BEI
-}
-
-export const getIpc = () => {
-  if (isNull(window.blconfig.SYS.ICP_BEI_AN_HAO)) {
-    return ''
-  }
-  return window.blconfig.SYS.ICP_BEI_AN_HAO
 }
 
 //#endregion
