@@ -67,19 +67,6 @@
       <div class="toc-container" :style="tocStyle">
         <div class="viewer-toc">
           <div v-if="article.id != 0" class="doc-info">
-            <div class="doc-name" style="font-size: 15px">{{ article.name }}</div>
-            <div class="doc-subtitle">
-              <span class="iconbl bl-pen-line"></span> {{ article.words }} 字 | <span class="iconbl bl-read-line"></span> {{ article.uv }} |
-              <span class="iconbl bl-like-line"></span> {{ article.likes }}
-            </div>
-            <div class="doc-subtitle">
-              <span class="iconbl bl-a-clock3-line"></span> 公开
-              {{ article.openTime }}
-            </div>
-            <div class="doc-subtitle">
-              <span class="iconbl bl-a-clock3-line"></span> 修改
-              {{ article.syncTime }}
-            </div>
           </div>
           <div class="toc-title">目录</div>
           <div class="toc-content">
