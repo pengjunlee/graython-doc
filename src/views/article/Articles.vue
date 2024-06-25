@@ -30,7 +30,7 @@
                 marginTop: data.p === '0' ? '5px' : '1px',
                 marginBottom: data.p === '0' ? '5px' : '1px'
               }">
-              <div :class="[data.t.includes('subject') && 1===2 ? 'subject-title' : 'doc-title']">
+              <div :class="[data.t.includes('subject') && false ? 'subject-title' : 'doc-title']">
                 <div class="doc-name">
                   <img class="menu-icon-img" v-if="isShowImg(data)" :src="data.icon" />
                   <svg v-else-if="isShowSvg(data)" class="icon menu-icon" aria-hidden="true">
