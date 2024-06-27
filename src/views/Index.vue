@@ -13,6 +13,7 @@
 <script setup lang="ts">
 import { ref, watch, computed } from 'vue'
 import router from '@/router'
+import IndexHeader from './index/IndexHeader.vue'
 import type { RouteRecordName } from 'vue-router'
 
 const includeRouter = ref<any>(['Home'])
