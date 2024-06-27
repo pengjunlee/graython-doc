@@ -8,8 +8,13 @@ const print = () => {
 print()
 
 export const getApiBaseUrl = () => {
-  return import.meta.env.DEV ? "":window.blconfig.SYS.GITHUB_URL
+  return import.meta.env.DEV ? "":window.blconfig.SYS.GITHUB_PROJECT
 }
+
+export const getLogoUrl = () => {
+  return import.meta.env.DEV ? '/favicon.png':window.blconfig.SYS.GITHUB_PROJECT+'/favicon.png'
+}
+
 
 //#region ------------------------------------------- 基础信息 -------------------------------------------
 

@@ -23,8 +23,7 @@ window.blconfig = {
     SYS: {
       // 网站名称
       NAME: 'Graython个人文档',
-      LOGO: '/favicon.png',
-      GITHUB_URL:'/graython-doc'
+      GITHUB_PROJECT:'/graython-doc'
     }
   }
 

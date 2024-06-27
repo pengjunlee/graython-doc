@@ -8,6 +8,7 @@
 import { onMounted, type StyleHTMLAttributes } from 'vue'
 import { ElConfigProvider } from 'element-plus'
 import { isNotBlank } from './assets/utils/obj'
+import { getLogoUrl } from '@/scripts/env'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 
 onMounted(async () => {
@@ -18,11 +19,11 @@ onMounted(async () => {
   }
 
   // 优先使用后台配置的博客名称, 否则使用默认的 favicon.png
-  if (isNotBlank(window.blconfig.SYS.LOGO)) {
+  if (isNotBlank(getLogoUrl())) {
     let link: HTMLLinkElement = document.querySelector("link[rel*='icon']") || document.createElement('link')
     link.type = 'image/x-icon'
     link.rel = 'shortcut icon'
-    link.href = window.blconfig.SYS.LOGO
+    link.href = getLogoUrl()
     document.getElementsByTagName('head')[0].appendChild(link)
   }
 })

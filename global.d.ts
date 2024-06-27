@@ -5,8 +5,7 @@ declare global {
     blconfig: {
       SYS: {
         NAME: string
-        LOGO: string
-        GITHUB_URL:string
+        GITHUB_PROJECT:string
       }
     }
   }
