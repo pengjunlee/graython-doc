@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { toRoute } from '@/router'
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { ElMessage } from 'element-plus'
 import { isNotNull } from '@/assets/utils/obj'
@@ -59,17 +58,9 @@ export class Request {
         if (isSuccess) {
           return res.data
         } else {
-          /*
-           * 其他接口报错, 直接拒绝并提示错误信息
-           */
-          let errorResponse = res.data
-          errorResponse['url'] = res.config.url
-          // 其他情况拒绝
-          ElMessage({ message: res.data.msg, duration: 9999 })
-          return Promise.reject(res)
+          return {"data":{"html":'<div style="color:#E3E3E3;width:100%;height:300px;display:flex;justify-content: center;align-items: center;font-size:25px;">文章不存在</div>'}}
         }
-        // 直接返回res，当然你也可以只返回res.data
-        return res
+
       },
       (err: any) => {
         let errorMsg = err.message

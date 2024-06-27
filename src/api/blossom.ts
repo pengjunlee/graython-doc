@@ -7,7 +7,6 @@ import type { R } from './request'
  * @returns
  */
 export const docTreeOpenApi = (params?: object): Promise<R<any>> => {
-
   return rq.get<R<any>>('/docTree.json')
 }
 
@@ -16,6 +15,6 @@ export const docTreeOpenApi = (params?: object): Promise<R<any>> => {
  * @param params
  * @returns
  */
-export const articleInfoOpenApi = (params?: object): Promise<R<any>> => {
-  return rq.getFile<R<any>>('/doc/20151/doc.html')
+export const articleInfoOpenApi = (id: string): Promise<R<any>> => {
+  return rq.getFile<R<any>>('/doc/'+id+'/doc.html')
 }

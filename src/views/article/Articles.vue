@@ -224,7 +224,7 @@ const getCurEditArticle = async (id: string) => {
     article.value = resp.data
   }
 
-    await articleInfoOpenApi({ id: id, showToc: false, showMarkdown: false, showHtml: true }).then((resp) => then(resp))
+    await articleInfoOpenApi(id).then((resp) => then(resp))
 }
 
 /**

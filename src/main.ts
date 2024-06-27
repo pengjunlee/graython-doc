@@ -16,16 +16,11 @@ import BLRow from '@/components/BLRow.vue'
 import BLCol from '@/components/BLCol.vue'
 import BLTag from '@/components/BLTag.vue'
 
-window.blconfig = {
-    /**
-     * 基础配置
-     */
-    SYS: {
-      // 网站名称
-      NAME: 'Graython个人文档',
-      GITHUB_PROJECT:'/graython-doc'
-    }
-  }
+window.SYS = {
+    // 网站名称
+    NAME: 'Graython个人文档',
+    GITHUB_PROJECT:'/graython-doc'
+}
 
 const app = createApp(App)
 app.use(pinia)

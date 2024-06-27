@@ -14,8 +14,8 @@ import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 onMounted(async () => {
   initCustomTheme()
   // 优先使用后台配置的博客名称, 否则使用默认
-  if (isNotBlank(window.blconfig.SYS.NAME)) {
-    document.title = window.blconfig.SYS.NAME
+  if (isNotBlank(window.SYS.NAME)) {
+    document.title = window.SYS.NAME
   }
 
   // 优先使用后台配置的博客名称, 否则使用默认的 favicon.png
