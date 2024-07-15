@@ -19,7 +19,7 @@ import BLTag from '@/components/BLTag.vue'
 window.SYS = {
     // 网站名称
     NAME: 'Graython个人文档',
-    GITHUB_PROJECT:'/graython-doc'
+    GITHUB_PROJECT:''
 }
 
 const app = createApp(App)
