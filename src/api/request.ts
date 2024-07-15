@@ -35,30 +35,15 @@ export class Request {
     this.instance.interceptors.response.use(
       (res: AxiosResponse) => {
         const status = res.status
+        debugger;
         if (status !== 200) {
           Promise.reject(res)
         }
-        // 本次响应是否正确
-        let isSuccess = false
-        // 返回文件流的, 可能没有JSON返回体, 但如果接口报错还是有返回体的
-        if (res.config.responseType === 'blob' || res.headers['content-type'] === 'application/force-download') {
-          if (isNotNull(res.data.code)) {
-            if (!isSuccessRCode(res.data.code)) {
-              isSuccess = false
-            }
-          } else {
-            isSuccess = true
-          }
-        }
-        // 响应码为正确的直接返回
-        if (isSuccessRCode(res.data.code)) {
-          isSuccess = true
-        }
 
-        if (isSuccess) {
+        if (res.data) {
           return res.data
         } else {
-          return {"data":{"html":'<div style="color:#E3E3E3;width:100%;height:300px;display:flex;justify-content: center;align-items: center;font-size:25px;">文章不存在</div>'}}
+          return {"html":'<div style="color:#E3E3E3;width:100%;height:300px;display:flex;justify-content: center;align-items: center;font-size:25px;">文章不存在</div>'}
         }
 
       },

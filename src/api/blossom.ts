@@ -6,8 +6,8 @@ import type { R } from './request'
  * @param params
  * @returns
  */
-export const docTreeOpenApi = (params?: object): Promise<R<any>> => {
-  return rq.get<R<any>>('/docTree.json')
+export const docTreeOpenApi = (params?: object): Promise<any> => {
+  return rq.getFile<any>('/docTree')
 }
 
 /**

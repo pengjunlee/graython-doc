@@ -184,7 +184,8 @@ const getDocTree = (callback?: () => void) => {
   defaultOpeneds.value = []
 
   const then = (resp: any) => {
-    docTreeData.value = resp.data
+    debugger;
+    docTreeData.value = resp
     docTreeData.value.forEach((l1: DocTree) => {
       defaultOpeneds.value.push(l1.i.toString())
     })
@@ -218,10 +219,10 @@ const clickCurDoc = async (tree: DocTree) => {
  */
 const getCurEditArticle = async (id: string) => {
   const then = (resp: any) => {
-    if (isNull(resp.data)) {
+    if (isNull(resp)) {
       return
     }
-    article.value = resp.data
+    article.value = resp
   }
 
     await articleInfoOpenApi(id).then((resp) => then(resp))
