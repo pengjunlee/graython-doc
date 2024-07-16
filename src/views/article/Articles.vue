@@ -106,7 +106,7 @@ import { getFontSize } from './scripts/article-setting'
 import { parseToc, toScroll, type Toc } from './scripts/doc-toc'
 import { isShowImg, isShowSvg, tags } from './scripts/doc-tree-detail'
 import { onHtmlEventDispatch } from './scripts/doc-content-event-dispatch'
-import { articleInfoOpenApi, docTreeOpenApi } from '@/api/blossom'
+import { articleInfoOpenApi, docTreeOpenApi } from '@/api/graython'
 // utils
 import { isNull, isNotNull, isNotBlank } from '@/assets/utils/obj'
 // components
