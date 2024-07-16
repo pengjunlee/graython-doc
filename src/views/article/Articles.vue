@@ -1,7 +1,6 @@
 <template>
   <div class="articles-root">
     <div class="mask" :style="maskStyle" @click="closeAll"></div>
-
     <div class="headmenu">
       <bl-row @click="handleMenu(!menuShow)">
         <div class="iconbl bl-model-line"></div>

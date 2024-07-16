@@ -16,5 +16,5 @@ export const docTreeOpenApi = (params?: object): Promise<any> => {
  * @returns
  */
 export const articleInfoOpenApi = (id: string): Promise<R<any>> => {
-  return rq.getFile<R<any>>('/doc/'+id+'/doc.html')
+  return rq.getFile<any>('/_post/'+id+'/doc.html')
 }
