@@ -183,7 +183,6 @@ const getDocTree = (callback?: () => void) => {
   defaultOpeneds.value = []
 
   const then = (resp: any) => {
-    debugger;
     docTreeData.value = resp
     docTreeData.value.forEach((l1: DocTree) => {
       defaultOpeneds.value.push(l1.i.toString())

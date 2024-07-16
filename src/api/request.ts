@@ -35,7 +35,7 @@ export class Request {
     this.instance.interceptors.response.use(
       (res: AxiosResponse) => {
         const status = res.status
-        debugger;
+        debugger
         if (status !== 200) {
           Promise.reject(res)
         }
