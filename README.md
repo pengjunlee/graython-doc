@@ -1,37 +1,29 @@
-# gray-blog
-
-#### 介绍
-个人开发笔记vlog
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+"id": "9999",
+  "type": 3,
+  "username": "blos",
+  "nickName": "Blossom 试用",
+  "avatar": "https://www.wangyunf.com/bl/pic/home/bl/img/U9999/6d2666df61553b5d3a761a0269113886.jpg",
+  "remark": "该账号是 Blossom 试用账号。",
+  "location": "101100101",
+  "articleCount": 23,
+  "articleWords": 138517,
+  "creTime": "2023-08-04 16:48:28",
+  "delTime": "0",
+  "params": null,
+  "userParams": {
+      "WEB_LOGO_NAME": "Blos 试用博客",
+      "WEB_BLOG_WATERMARK_CONTENT": "Blossom",
+      "WEB_ARTICLE_URL": "https://wangyunf.com/blos/#/articles?articleId=",
+      "WEB_BLOG_WATERMARK_COLOR": "rgba(157, 157, 157, 0.2)",
+      "WEB_BLOG_URL_ERROR_TIP_SHOW": "",
+      "WEB_BLOG_LINKS": "[\n  {\n    \"NAME\": \"Blossom 官方文档\",\n    \"URL\": \"https://www.wangyunf.com/blossom-doc/index\",\n    \"LOGO\": \"https://www.wangyunf.com/bl/pic/home/bl/img/U1/head/blossom_logo.png\"\n  },{\n    \"NAME\": \"Blossom 试用地址\",\n    \"URL\": \"https://www.wangyunf.com/blossom-demo/#/settingIndex\",\n    \"LOGO\": \"https://www.wangyunf.com/bl/pic/home/bl/img/U1/head/blossom_logo_grey.png\"\n  }\n]",
+      "WEB_LOGO_URL": "https://www.wangyunf.com/bl/pic/home/bl/img/U9999/6d2666df61553b5d3a761a0269113886.jpg",
+      "WEB_GONG_WANG_AN_BEI": "公网安备号示例",
+      "WEB_BLOG_WATERMARK_GAP": "200",
+      "WEB_IPC_BEI_AN_HAO": "ICP 备案号示例",
+      "WEB_BLOG_WATERMARK_ENABLED": "1",
+      "WEB_BLOG_COLOR": "rgb(104, 104, 104)",
+      "WEB_BLOG_SHOW_ARTICLE_NAME": "1",
+      "WEB_BLOG_SUBJECT_TITLE": "0",
+      "WEB_BLOG_WATERMARK_FONTSIZE": "13"
+  }
